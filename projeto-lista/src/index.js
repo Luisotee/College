@@ -2,10 +2,11 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App.js';
+import ComHeader from './Componentes/ComHeader';
 import reportWebVitals from './reportWebVitals';
 
 ReactDOM.render(
-  App(),
+  <ComHeader nome="Luis"/>,
   document.getElementById('root')
 );
 

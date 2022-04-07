@@ -4,7 +4,7 @@ import ComHeader from './Componentes/ComHeader.js';
 
 var App = function () {
   return(
-    console.log(ComHeader())
-  );
+    ComHeader
+  )
 }
 export default App

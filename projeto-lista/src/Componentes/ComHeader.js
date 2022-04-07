@@ -6,10 +6,14 @@ let filaEntrega = array.reduce(
     (previousValue, currentValue) => previousValue + currentValue
 )
 
-export default class ComHeader extends React.Component {
-    render(){
+class ComHeader extends React.Component {
+    render() {
         return(
-            console.log('a')
-        )
-    }
+            <div>
+                Olá {this.props.nome}
+            </div>
+        );
+    }    
 }
+
+export default ComHeader
