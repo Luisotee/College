@@ -1,10 +1,9 @@
-import './App.css'
-import './Componentes/ComHeader.js'
-import ComHeader from './Componentes/ComHeader.js';
+import "./App.css";
+import "./Componentes/ComHeader.js";
+import "./Componentes/ComHeader.js";
+import comHeader from "./Componentes/ComHeader.js";
 
 var App = function () {
-  return(
-    ComHeader
-  )
-}
-export default App
+  return comHeader();
+};
+export default App;

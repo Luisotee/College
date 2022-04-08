@@ -14,3 +14,11 @@ class ComponenteMensagem extends React.Component {
 }
 
 export default ComponenteMensagem;
+
+
+
+
+
+var array = [2, 2, 4, 4]
+var filaEntrega = array.reduce(
+    (previousValue, currentValue) => previousValue + currentValue)

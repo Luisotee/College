@@ -1,19 +1,25 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
+import React from "react";
+import ReactDOM, { render } from "react-dom";
 
-let array = [2, 2, 4, 4]
-let filaEntrega = array.reduce(
+function comHeader() {
+  let array = [2, 2, 4, 4];
+  let filaEntrega = array.reduce(
     (previousValue, currentValue) => previousValue + currentValue
-)
+  );
 
-class ComHeader extends React.Component {
-    render() {
-        return(
-            <div>
-                Olá {this.props.nome}
-            </div>
-        );
-    }    
+  const nomeApp = "Ifood";
+  const url = "https://sisenor.com.br/wp-content/uploads/2021/03/ico-ifood.png";
+
+  return (
+    <div>
+      <img src={url} className="App-logo" alt="logo" />
+      <h1> {nomeApp.toUpperCase()} </h1>
+      <a className="App-link" href="ifood.com.br" target="_blank">
+        Facens
+      </a>
+      <p> Fila de espera: {filaEntrega} </p>
+    </div>
+  );
 }
 
-export default ComHeader
+export default comHeader;
