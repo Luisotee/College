@@ -1,11 +1,9 @@
-import React from "react";
 import ReactDOM from "react-dom";
 import "./index.css";
 import App from "./App.js";
 import reportWebVitals from "./reportWebVitals";
-import comHeader from "./Componentes/ComHeader";
 
-ReactDOM.render(comHeader(), document.getElementById("root"));
+ReactDOM.render(App(), document.getElementById("root"));
 
 // If you want to start measuring performance in your app, pass a function
 // to log results (for example: reportWebVitals(console.log))
