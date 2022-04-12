@@ -1,10 +1,9 @@
 import './App.css';
+import {HeaderComponent} from './Header'
 
 function App() {
   return (
-    <form>
-
-    </form>
+    HeaderComponent()
   );
 }
 
