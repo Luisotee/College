@@ -1,8 +1,10 @@
 import "./App.css";
-import {enviarValidar} from "./enviarValidar"
+import {enviarValidar} from "./enviarValidar";
+import {useState} from 'react';
 //import { HeaderC } from "./HeaderComponent";
 
 function App() {
+  const [Name, setName] = useState();
   return (
     <form onSubmit={enviarValidar}>
       <label>
