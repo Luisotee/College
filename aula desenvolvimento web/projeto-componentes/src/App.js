@@ -1,15 +1,18 @@
 import "./App.css";
-import {enviarValidar} from "./enviarValidar";
-import {useState} from 'react';
+import { enviarValidar } from "./enviarValidar";
+import { useState } from "react";
 //import { HeaderC } from "./HeaderComponent";
 
 function App() {
   const [Name, setName] = useState();
+  function changeName(e) {
+    setName(e.target.value);
+  }
   return (
     <form onSubmit={enviarValidar}>
       <label>
         Nome:
-        <input type="text" className="Name" />
+        <input type="text" placeholder="Nome" value={Name} onChange={changeName} />
       </label>
       <label>
         <br />

@@ -7,5 +7,5 @@ export function enviarValidar(e) {
 }
 
 export function changeName(e){
-    setName(e.target.value); 
+    //setName(e.target.value); 
 }
