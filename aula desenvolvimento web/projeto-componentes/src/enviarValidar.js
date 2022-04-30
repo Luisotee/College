@@ -6,9 +6,11 @@ import "react-toastify/dist/ReactToastify.css";
 export function enviarValidar(e) {
   toast.configure();
   if (e.preventDefault()) alert("Dados cadastrados");
-  if ((document.getElementById("Name").value === undefined))
+  if ((document.getElementById("Name").value === ""))
     toast.error("Erro. Nome não pode estar vazio");
-  else toast.success("Dados Cadastrados! ");
+  else {   
+    toast.success("Dados Cadastrados! ");
+  } 
 }
 
 export function changeName(e) {

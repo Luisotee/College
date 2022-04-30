@@ -3,11 +3,18 @@ import { enviarValidar } from "./enviarValidar";
 import { useState } from "react";
 import { HeaderC } from "./HeaderComponent";
 import Relogio from "./Relogio";
+import { Exibir } from "./Exibir";
 
 function App() {
-  const [Name, setName] = useState();
+  const [clientes, setClientes] = useState([]);
+  const [Name, setName] = useState(); 
+  let novo = { nome: 'Luis', telefone: '15991306053' };
+  
   function changeName(e) {
     setName(e.target.value);
+  }
+  function clienteSet(e) {
+    setClientes([...clientes, novo]); 
   }
   return (
     <>
@@ -47,8 +54,8 @@ function App() {
         <br></br>
         <input type="submit" value="Enviar"></input>
       </form>
+      <Exibir conteudo={clientes}/>
     </>
   );
 }
-
 export default App;
