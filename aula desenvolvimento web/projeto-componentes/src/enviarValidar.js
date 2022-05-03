@@ -12,8 +12,8 @@ export function enviarValidar(e) {
 
   toast.configure();
   if (e.preventDefault()) alert("Dados cadastrados");
-  if (name.value  === "" || address.value  === "" || city.value  === "" || state.value === "")
-    toast.error("Erro. Campo não pode estar vazio");
+ // if (name.value  === "" || address.value  === "" || city.value  === "" || state.value === "")
+   // toast.error("Erro. Campo não pode estar vazio");
   else toast.success("Dados Cadastrados! ");
 }
 

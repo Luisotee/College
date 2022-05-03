@@ -6,16 +6,15 @@ import Relogio from "./Relogio";
 import { Exibir } from "./Exibir";
 
 function App() {
-  const [clientes, setClientes] = useState([]);
+  const [clientes, setClientes] = useState();
   const [Name, setName] = useState(); 
   let novo = { nome: 'Luis', telefone: '15991306053' };
-  
+  setClientes([...clientes, novo]);
+    
   function changeName(e) {
     setName(e.target.value);
   }
-  function clienteSet(e) {
-    setClientes([...clientes, novo]); 
-  }
+
   return (
     <>
       <HeaderC />
@@ -25,7 +24,7 @@ function App() {
           Nome:
           <input
             type="text"
-            id="name"
+            id="Name"
             placeholder="Name"
             value={Name}
             onChange={changeName}
@@ -34,22 +33,22 @@ function App() {
         <label>
           <br />
           Endereço:
-          <input type="text" id="address" placeholder="Endereço" />
+          <input type="text" id="Address" />
         </label>
         <label>
           <br />
           Cidade:
-          <input type="text" id="city" placeholder="Cidade" />
+          <input type="text" id="City" />
         </label>
         <label>
           <br />
           Estado:
-          <input type="text" id="state" placeholder="Estado" />
+          <input type="text" id="State" />
         </label>
         <label>
           <br />
           Numero de telefone:
-          <input type="text" id="cellphoneNumber" placeholder="Numero de telefone"/>
+          <input type="text" id="CellphoneNumber" />
         </label>
         <br></br>
         <input type="submit" value="Enviar"></input>
