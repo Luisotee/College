@@ -1,7 +1,19 @@
-import logo from './logo.svg';
-import './App.css';
+import logo from "./logo.svg";
+import "./App.css";
+import { useState } from "react";
 
 function App() {
+  const [clientes, setClientes] = useState([]);
+  let novoCliente = {
+    name: "Luis",
+    phone: "a",
+  };
+  setClientes([
+    ...clientes,
+    novoCliente
+  ])
+
+
   return (
     <div className="App">
       <header className="App-header">
