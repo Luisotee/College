@@ -6,13 +6,15 @@ import Relogio from "./Relogio";
 import { Exibir } from "./Exibir";
 
 function App() {
-  const [clientes, setClientes] = useState();
-  const [Name, setName] = useState(); 
-  let novo = { nome: 'Luis', telefone: '15991306053' };
-  setClientes([...clientes, novo]);
-    
+  const [clientes, setClientes] = useState([]);
+  const [Name, setName] = useState([]);
+  let novo = { nome: "nome", telefone: "telefone" };
+
+  //setClientes([...clientes, novo]); está dando erro "too many re-renders, não consegui arrumar"
+
   function changeName(e) {
     setName(e.target.value);
+    setClientes([...clientes, novo]);
   }
 
   return (
@@ -53,7 +55,7 @@ function App() {
         <br></br>
         <input type="submit" value="Enviar"></input>
       </form>
-      <Exibir conteudo={clientes}/>
+      <Exibir conteudo={clientes} />
     </>
   );
 }
